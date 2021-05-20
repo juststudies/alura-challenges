@@ -48,23 +48,30 @@
             </div>
             <button>Visualizar com o Highlight</button>
         </main>
-    
+
         <div class="right">
             <form action="">
                 <div class="project">
                     <p>Seu projeto</p>
-                    <input type="text" placeholder="Nome do seu projeto">
-                    <input type="text" placeholder="Descrição do seu projeto">
+                    <input type="text" class="project__title" placeholder="Nome do seu projeto">
+                    <input type="text" class="project__description" placeholder="Descrição do seu projeto">
                 </div>
         
                 <div class="customization">
+                    <p>Personalização</p>
                     <select>
-                        <option value="javascript">Javascript</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
                     </select>
+                    <div id="color">
+                        <input type="color" value="#6BD1FF"/>
+                    </div>
                 </div>
                 <button type="submit">Salvar projeto</button>
             </form>
         </div>
+
     </div>
 </body>
 </html>

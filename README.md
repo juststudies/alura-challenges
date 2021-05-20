@@ -6,6 +6,6 @@ AluraDev é um site desenvolvido para as semanas da alura challenges, semana est
 
  - [x] Header Concluído.
  - [x] NavBar concluída.
- - [ ] Form da aplicação ... _em desenvolvimento_
+ - [x] Form da aplicação.
  - [ ] Editor central.
  - [ ] Pagina da comunidade.
