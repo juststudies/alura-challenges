@@ -1,0 +1,36 @@
+
+.container main{
+    display: flex;
+    flex-direction: column;
+}
+
+.container main .border{
+    background-color:#6BD1FF;
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.container main .border textarea{
+    width: 688px;
+    height: 302px;
+    color: #FFF;
+    background-image: url('../../img/icons/mac_buttons.svg');
+    background-repeat: no-repeat;
+    background-position: 16px 16px;
+    background-color: #141414;
+    padding-top: 52px;
+    padding-left: 16px;
+}
+
+.container main button{
+    background-color: rgba(80, 129, 251, 0.08);
+    margin-top: 32px;
+    padding: 16px;
+    color: #FFF;    
+    border-radius: 8px;
+    border: 0;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
