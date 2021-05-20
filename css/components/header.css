@@ -1,0 +1,27 @@
+header{
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px;
+}
+
+header .search-box input{
+    width: 752px;
+    height: 56px;
+    border: 0;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    padding: 16px 14px;
+}
+
+header .profile-image{
+    display: flex;
+}
+
+header .profile-image p{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    line-height: 24px;
+    margin-left: 8px;
+}

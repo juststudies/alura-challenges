@@ -1,0 +1,41 @@
+.container nav{
+    font-family: 'Inter', sans-serif;
+    line-height: 18px;
+}
+
+.container nav #menu{
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+}
+
+.container nav .menu{
+    list-style: none;
+}
+
+.container nav .menu .menu__item{
+    display: flex;
+    margin-top: 16px;
+}
+
+.container nav .menu .menu__item p,
+.container nav .menu .menu__item .menu__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container nav .menu .menu__item .menu__icon{
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    margin-right: 16px;
+}
+
+.container nav .menu .menu__item .menu__icon{
+    background-color: #5081FB;
+}
+
+.container nav .menu .menu__item--disabled{
+    opacity: 16%;    
+}
