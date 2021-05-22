@@ -4,61 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
     <title>Alura Dev</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="./img/logo/Logo.png" alt="Logo Alura Dev">
-        </div>
-        <div class="search-box">
-            <input type="text" placeholder="Busque por algo">
-        </div>
-        <div class="profile-image">
-            <img src="./img/profile/Author.png" alt="imagem do perfil">
-            <p>Harry</p>
-        </div>
-    </header>
-
-    <div class="container">
-        <nav>
-            <p id="menu">Menu</p>
-            <ul class="menu">
-                <li class="menu__item">
-                    <div class="menu__icon">
-                        <img src="./img/icons/code.svg" alt="code icon">
-                    </div>
-                    <p>Editor de Código</p>                                      
-                </li>
-                <li class="menu__item menu__item--disabled">
-                    <div class="menu__icon">
-                        <img src="./img/icons/comunity.svg" alt="comunity icon">
-                    </div>
-                    <p>Comunidade</p>
-                </li>
-            </ul>
-        </nav>
-    
-        <main>
-            <div class="border">
-                <textarea name="code-editor" id="code-editor" cols="30" rows="10"></textarea>
+    <div class="app">
+        <header>
+            <div class="logo">
+                <img src="./img/logo/Logo.svg" alt="Logo Alura Dev">
             </div>
-            <button>Visualizar com o Highlight</button>
-        </main>
-
-        <div class="right">
+            <div class="search-box">
+                <input type="text" placeholder="Busque por algo">
+            </div>
+            <div class="profile-image">
+                <img src="./img/profile/Author.png" alt="imagem do perfil">
+                <p>Harry</p>
+            </div>
+        </header>
+    
+        <div class="container">
+            <nav>
+                <h2>Menu</h2>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <div class="menu__icon">
+                            <img src="./img/icons/code.svg" alt="code icon">
+                        </div>
+                        <p>Editor de Código</p>                                      
+                    </li>
+                    <li class="menu__item menu__item--disabled">
+                        <div class="menu__icon">
+                            <img src="./img/icons/comunity.svg" alt="comunity icon">
+                        </div>
+                        <p>Comunidade</p>
+                    </li>
+                </ul>
+            </nav>
+        
+            <main>
+                <div class="border">
+                    <textarea name="code-editor" id="code-editor" cols="30" rows="10"></textarea>
+                </div>
+                <button>Visualizar com o Highlight</button>
+            </main>
+    
+            
             <form action="">
                 <div class="project">
-                    <p>Seu projeto</p>
+                    <h2>Seu projeto</h2>
                     <input type="text" class="project__title" placeholder="Nome do seu projeto">
                     <input type="text" class="project__description" placeholder="Descrição do seu projeto">
                 </div>
         
                 <div class="customization">
-                    <p>Personalização</p>
+                    <h2>Personalização</h2>
                     <select>
                         <option value="javascript">JavaScript</option>
                         <option value="html">HTML</option>
@@ -70,8 +72,9 @@
                 </div>
                 <button type="submit">Salvar projeto</button>
             </form>
+            
+    
         </div>
-
     </div>
 </body>
 </html>
