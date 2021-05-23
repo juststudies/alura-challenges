@@ -17,7 +17,7 @@
 
 .app .container nav .menu .menu__item{
     display: flex;
-    margin-top: 1rem;
+    margin-top: 16px;
 }
 
 .app .container nav .menu .menu__item p,

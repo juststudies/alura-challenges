@@ -1,16 +1,15 @@
 .app header{
- display: flex;
- justify-content: space-around;
- align-items: center;
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-   
+
 .app header .logo{
-    width: 40%;
+    width: 20%;
 }
 
 .app header .search-box{
-    width: 100%;
+    width: 55%;
     height: 56px;
     border: 0;
     border-radius: var(--border-radius);
@@ -22,7 +21,7 @@
 }
 
 .app header .profile-image{
-    width: 43.5%;
+    width: 22%;
     height: 56px;
     display: flex;
     justify-content: flex-end;
@@ -34,4 +33,8 @@
     color: var(--branco);
     font-size: 1rem;
     line-height: 24px;
+}
+
+.app header .burger-menu{
+    display: none;
 }

@@ -40,3 +40,47 @@ body{
     margin-top: 40px;
     justify-content: space-between;
 }
+
+@media screen and (max-width:768px) {
+    .app header .profile-image{
+        display: none;
+    }
+
+    .app header .logo{
+        width: 28%;
+    }
+    
+    .app header .burger-menu{
+        width: 13%;
+        height: 56px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }  
+
+    .container nav{
+        display: none;
+    }
+
+    .app .container{
+        flex-direction: column;
+    }
+
+    .app .container main{
+        width: 100%;
+    }
+
+    .app .container form{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .app .container form .customization .customization__options{
+        display: flex;
+    }
+
+    .app .container form .customization .customization__options select{
+        margin-right: 16px;
+    }
+
+}

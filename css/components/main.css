@@ -30,7 +30,7 @@
 
 .app .container main button{
     height: 56px;
-    margin-top: 1rem;
+    margin-top: 32px;
     background-color: var(--button-color);
     border-radius: var(--border-radius);
     border: none;
