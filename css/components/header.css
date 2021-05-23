@@ -1,22 +1,17 @@
-header{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-   
-header .logo{
-    width: 10.5%;
-    height: 60.8%;
-}
-
-header .search-box{
-    width: 59%;
+.app header{
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
     
 }
+   
+.app header .logo{
+    width: 40%;
+}
 
-header .search-box input{
-    width: 93%;
-    height: 56px;    
+.app header .search-box{
+    width: 100%;
+    height: 56px;
     border: 0;
     border-radius: var(--border-radius);
     background-color: var(--bg-opacity);
@@ -26,15 +21,15 @@ header .search-box input{
     line-height: 24px;
 }
 
-header .profile-image{
-    width: 106px;
+.app header .profile-image{
+    width: 43.5%;
     height: 56px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
-header .profile-image p{
+.app header .profile-image p{
     margin-left: 12px;
     color: var(--branco);
     font-size: 1rem;

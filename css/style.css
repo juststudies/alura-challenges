@@ -31,8 +31,8 @@ body{
 }
 
 .app{
-    padding: 2rem 2rem;
     font-family: var(--font-family);
+    padding: 2rem 2rem;
 }
 
 .container{
