@@ -20,6 +20,10 @@
     line-height: 24px;
 }
 
+.app header .search-box:hover{
+    background: var(--color-hover);
+}
+
 .app header .profile-image{
     width: 22%;
     height: 56px;

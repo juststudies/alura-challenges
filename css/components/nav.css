@@ -4,6 +4,7 @@
 }
 
 .app .container nav h2{
+    height: 18px;
     font-weight: normal;
     font-size: 12px;
     line-height: 18px;
@@ -37,4 +38,8 @@
 
 .app .container nav .menu .menu__item--disabled{
     opacity: 16%;
+}
+
+.app .container nav .menu .menu__item--disabled:hover{
+    opacity: 64%;
 }

@@ -7,6 +7,7 @@
 
 .app .container form .project h2,
 .app .container form .customization h2{
+    height: 18px;
     font-weight: normal;
     font-size: 12px;
     line-height: 24px;
@@ -14,18 +15,30 @@
     text-transform: uppercase;
 }
 
-.app .container form .project input,
+.app .container form .project .project__title,
+.app .container form .project .project__description,
 .app .container form .customization select{
     height: 56px;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 16px;
     padding: 14px 16px;
     background: var(--bg-opacity);
     border: none;
     border-radius: var(--border-radius);
-    font-size: 1rem;
-    line-height: 24px;
+    font-size: 16px;
     color: var(--branco);
+}
+
+.app .container form .project .project__description{
+    resize: none;
+    height: 80px;
+    font-family: var(--font-family);
+}
+
+.app .container form .project .project__description:hover,
+.app .container form .project .project__title:hover,
+.app .container form .customization select:hover{
+    background: var(--color-hover);
 }
 
 .app .container form .customization{
@@ -37,6 +50,7 @@
     background-image: url('../../img/icons/arrow-down.svg');
     background-repeat: no-repeat;
     background-position: 95.15% 50%;
+    color: rgba(255, 255, 255, 0.64);
 }
 
 .app .container form .customization select option{
@@ -65,11 +79,23 @@
     width: 100%;
     height: 56px;
     margin-top: 32px;
-    background-color: var(--submit-button-color);
-    color: var(--bg);
+    background-color: var(--submit-button-background);
+    color: var(--submit-button-color);
     border: 0;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     font-size: 16px;
     line-height: 24px;
     text-align: center;
+}
+
+.app .container form [type="submit"]:hover{
+    background: var(--submit-button-bg-hover);
+}
+
+.app .container form [type="submit"]:active{
+    border: 4px solid var(--submit-button-bg-pressed);
+}
+
+.app .container form [type="submit"]:focus{
+    background: var(--submit-button-bg-focus);
 }

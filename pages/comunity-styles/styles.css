@@ -1,0 +1,40 @@
+.app .container{
+    width: 100%;    
+}
+
+.app .container nav .menu .menu__item a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app .container main{
+    width: 100%;
+    display: grid;
+}
+
+.app .container main #code-editor{
+    width: 472px;
+    height: 240px;
+    border: 24px solid var(--border-textarea);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-textarea);
+    color: var(--branco);
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.app .container main #code-editor #mac-buttons{
+    width: 100%;
+    height: 30px;
+    background-image: url('../../img/icons/mac_buttons.svg');
+    background-repeat: no-repeat;
+    background-position: 1rem 1rem;
+}
+
+.app .container main #code-editor .code{
+    font-size: 11px;
+    margin: 12px 0;
+    padding-left: 12px;
+    font-family: 'Roboto', sans-serif;
+}

@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dark.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
     <title>Alura Dev</title>
 </head>
 <body>
@@ -38,17 +40,20 @@
                         <p>Editor de Código</p>                                      
                     </li>
                     <li class="menu__item menu__item--disabled">
-                        <div class="menu__icon">
-                            <img src="./img/icons/comunity.svg" alt="comunity icon">
-                        </div>
+                        <a href="./pages/comunity.html">
+                            <div class="menu__icon">
+                                <img src="./img/icons/comunity.svg" alt="comunity icon">
+                            </div>
+                        </a>
                         <p>Comunidade</p>
                     </li>
                 </ul>
             </nav>
         
             <main>
-                <div class="border">
-                    <textarea name="code-editor" id="code-editor" cols="30" rows="10"></textarea>
+                <div class="code-wrapper textarea--border">
+                    <div class="mac-buttons"></div>
+                    <code class="preview hljs" contenteditable="true" aria-label="editor"></code>
                 </div>
                 <button>Visualizar com o Highlight</button>
             </main>
@@ -58,7 +63,7 @@
                 <div class="project">
                     <h2>Seu projeto</h2>
                     <input type="text" class="project__title" placeholder="Nome do seu projeto">
-                    <input type="text" class="project__description" placeholder="Descrição do seu projeto">
+                    <textarea name="description" class="project__description" placeholder="Descrição do seu projeto"></textarea>
                 </div>
         
                 <div class="customization">
@@ -76,9 +81,10 @@
                 </div>
                 <button type="submit">Salvar projeto</button>
             </form>
-            
-    
         </div>
     </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script src="./js/hljs.js"></script>
+    <script src="./js/colorChanger.js"></script>
 </body>
 </html>

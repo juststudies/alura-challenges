@@ -6,15 +6,20 @@
 :root{
     --branco: #FFF;
     --bg: #051D3B;
+    --submit-button-color: var(--bg);
+    --submit-button-bg-hover: #7BA4FC;
+    --submit-button-bg-pressed: rgba(80, 129, 251, 0.72);
+    --submit-button-bg-focus: #96B9FD;
     --border-radius: 8px;
     --font-family: 'Inter', sans-serif;
     --icon-bg: #5081FB;
     --bg-opacity: rgba(255, 255, 255, 0.16);
     --border-color: #C4C4C4;
     --button-color: rgba(80, 129, 251, 0.08);
-    --submit-button-color:var(--icon-bg);
+    --submit-button-background:var(--icon-bg);
     --border-textarea: #6bd1ff;
     --bg-textarea: #141414;
+    --color-hover: rgba(255,255,255,0.24);
 }
 
 *{
@@ -39,6 +44,10 @@ body{
     display: flex;
     margin-top: 40px;
     justify-content: space-between;
+}
+
+input:hover{
+    background-color: red;
 }
 
 @media screen and (max-width:768px) {
