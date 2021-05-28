@@ -19,7 +19,7 @@
             
             <div class="profile-image">
                 <img src="../img/profile/Author.png" alt="imagem do perfil">
-                <p>Harry</p>
+                <span>Harry</span>
             </div>
             <div class="burger-menu">
                 <img src="../img/icons/burger-icon.svg" alt="burger icon menu">
@@ -47,28 +47,174 @@
                 </ul>
             </nav>
 
-            <main>
+            <main class="code">
                 
-                <div id="code-editor">
-                    <div id="mac-buttons">
-                    </div>
-                    <p class="code">
-                        const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-                        <br><br>
-                        const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-                        <br><br>
-                        const unfold = (f, seed) => {
-                            const go = (f, seed, acc) => {
-                                const res = f(seed)
-                                return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                <div class="code__container">
+                    <div class="code__wrapper code--border" style="background-color: #9AFF6B;">
+                        <div id="mac-buttons"></div>
+                        <code>
+                            const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                            <br><br>
+                            const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                            <br><br>
+                            const unfold = (f, seed) => {
+                                const go = (f, seed, acc) => {
+                                    const res = f(seed)
+                                    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                                }
+                                return go(f, seed, [])
                             }
-                            return go(f, seed, [])
-                        }
-                    </p>
-                </div>
+                        </code>
+                    </div>
+                    <div class="code__sections">
+                        <section class="code__sections__info">
+                            <h2>Título do projeto</h2>
+                            <p>Essa é a descrição do meu projeto.</p>
+                        </section>
+                        <div class="code__sections__social">
+                            <section class="code__sections__social__interactions">
+                                <div class="code__sections__social__interactions__comments">
+                                    <img src="../img/icons/comments.svg" alt="comments icon">
+                                    <span>9</span>
+                                </div>
+                                <div class="code__sections__social__interactions__like">
+                                    <img src="../img/icons/likes.svg" alt="likes icon">
+                                    <span>9</span>
+                                </div>
+                            </section>
+                            <section class="code__sections__social__profile">
+                                <img src="../img/profile/Author.png" alt="author image">
+                                <span>@Harry</span>
+                            </section>
+                        </div>
+                    </div>
+                </div>                
                 
-            </main>
+                
+                <div class="code__container">
+                    <div class="code__wrapper code--border" style="background-color: #6B83FF;">
+                        <div id="mac-buttons"></div>
+                        <code>
+                            const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                            <br><br>
+                            const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                            <br><br>
+                            const unfold = (f, seed) => {
+                                const go = (f, seed, acc) => {
+                                    const res = f(seed)
+                                    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                                }
+                                return go(f, seed, [])
+                            }
+                        </code>
+                    </div>
+                    <div class="code__sections">
+                        <section class="code__sections__info">
+                            <h2>Título do projeto</h2>
+                            <p>Essa é a descrição do meu projeto.</p>
+                        </section>
+                        <div class="code__sections__social">
+                            <section class="code__sections__social__interactions">
+                                <div class="code__sections__social__interactions__comments">
+                                    <img src="../img/icons/comments.svg" alt="comments icon">
+                                    <span>9</span>
+                                </div>
+                                <div class="code__sections__social__interactions__like">
+                                    <img src="../img/icons/likes.svg" alt="likes icon">
+                                    <span>9</span>
+                                </div>
+                            </section>
+                            <section class="code__sections__social__profile">
+                                <img src="../img/profile/Author.png" alt="author image">
+                                <span>@Harry</span>
+                            </section>
+                        </div>
+                    </div>
+                </div>                
+                
+                <div class="code__container">
+                    <div class="code__wrapper code--border" style="background-color: #FFC46B;">
+                        <div id="mac-buttons"></div>
+                        <code>
+                            const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                            <br><br>
+                            const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                            <br><br>
+                            const unfold = (f, seed) => {
+                                const go = (f, seed, acc) => {
+                                    const res = f(seed)
+                                    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                                }
+                                return go(f, seed, [])
+                            }
+                        </code>
+                    </div>
+                    <div class="code__sections">
+                        <section class="code__sections__info">
+                            <h2>Título do projeto</h2>
+                            <p>Essa é a descrição do meu projeto.</p>
+                        </section>
+                        <div class="code__sections__social">
+                            <section class="code__sections__social__interactions">
+                                <div class="code__sections__social__interactions__comments">
+                                    <img src="../img/icons/comments.svg" alt="comments icon">
+                                    <span>9</span>
+                                </div>
+                                <div class="code__sections__social__interactions__like">
+                                    <img src="../img/icons/likes.svg" alt="likes icon">
+                                    <span>9</span>
+                                </div>
+                            </section>
+                            <section class="code__sections__social__profile">
+                                <img src="../img/profile/Author.png" alt="author image">
+                                <span>@Harry</span>
+                            </section>
+                        </div>
+                    </div>
+                </div>                
+                
+                <div class="code__container">
+                    <div class="code__wrapper code--border" style="background-color: #FF6BCD;">
+                        <div id="mac-buttons"></div>
+                        <code>
+                            const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                            <br><br>
+                            const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                            <br><br>
+                            const unfold = (f, seed) => {
+                                const go = (f, seed, acc) => {
+                                    const res = f(seed)
+                                    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                                }
+                                return go(f, seed, [])
+                            }
+                        </code>
+                    </div>
+                    <div class="code__sections">
+                        <section class="code__sections__info">
+                            <h2>Título do projeto</h2>
+                            <p>Essa é a descrição do meu projeto.</p>
+                        </section>
+                        <div class="code__sections__social">
+                            <section class="code__sections__social__interactions">
+                                <div class="code__sections__social__interactions__comments">
+                                    <img src="../img/icons/comments.svg" alt="comments icon">
+                                    <span>9</span>
+                                </div>
+                                <div class="code__sections__social__interactions__like">
+                                    <img src="../img/icons/likes.svg" alt="likes icon">
+                                    <span>9</span>
+                                </div>
+                            </section>
+                            <section class="code__sections__social__profile">
+                                <img src="../img/profile/Author.png" alt="author image">
+                                <span>@Harry</span>
+                            </section>
+                        </div>
+                    </div>
+                </div>               
 
+            </main>
         </div>
     </div>
 </body>

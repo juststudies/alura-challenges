@@ -16,17 +16,19 @@
     list-style: none;    
 }
 
-.app .container nav .menu .menu__item{
+.app .container nav .menu .menu__item {
     display: flex;
     margin-top: 16px;
 }
 
-.app .container nav .menu .menu__item p,
-.app .container nav .menu .menu__item .menu__icon{
+.app .container nav .menu .menu__item a,
+.app .container nav .menu .menu__item .menu__icon,
+.app .container nav .menu .menu__item p{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .app .container nav .menu .menu__item .menu__icon{
     width: 3rem;
