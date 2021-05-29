@@ -22,7 +22,9 @@
     --bg-textarea: #141414;
     --color-hover: rgba(255,255,255,0.24);
     --menu-responsive-color: #2D415B;
-    
+    --bg-hover-color: rgba(255, 255, 255, 0.08);
+    --bg-burger-hover-color: rgba(80, 129, 251, 0.08);
+    --bg-burger-active-color: rgba(80, 129, 251, 0.16);
 }
 
 *{
@@ -49,9 +51,10 @@ body{
     justify-content: space-between;
 }
 
-input:hover{
-    background-color: red;
+.app .container .menu .responsive{
+    display: none;
 }
+
 
 @media screen and (max-width: 800px){
     .app{
@@ -64,7 +67,7 @@ input:hover{
         margin: 32px 32px;
     }
 
-    .app header .profile-image{
+    .app header .profile{
         display: none;
     }
 
@@ -74,16 +77,26 @@ input:hover{
     }
     
     .app header .search-box{
-        width: 67.3%;
+        width: 62.9%;
                 
     }
     
     .app header .burger-menu{
-        width: 13%;
         height: 56px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        padding: 14px;
+        margin-left: 20px;
+    }
+
+    .app header .burger-menu:hover{
+        background: var(--bg-burger-hover-color);
+        border-radius: 16px;
+    }
+
+    .app header .burger-menu:active{
+        background: var(--bg-burger-active-color);
     }
 
     .app header .close{
@@ -113,6 +126,10 @@ input:hover{
     .app .container .menu__responsive .menu{
         width: 100%;
         padding: 24px;
+    }
+
+    .app .container .menu__responsive .menu .responsive{
+        display: block;
     }
 
     .app .container .menu__responsive .menu .responsive .responsive--divisor{

@@ -66,13 +66,34 @@
 .app .container .code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__like{
     display: flex;
     align-items: center;
-    gap: 10px;
+    padding: 10px;
+}
+
+.app .container .code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__comments img,
+.app .container .code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__like img{
+    margin-right: 10px;
+}
+
+.app .container .code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__comments:hover,
+.app .container .code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__like:hover,
+.app .container .code .code__container .code__sections .code__sections__social__profile:hover{
+    background: var(--bg-hover-color);
+    border-radius: var(--border-radius);
+}
+
+.app .container .code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__comments:active,
+.app .container .code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__like:active{
+    background: var(--bg-opacity);
 }
 
 .app .container .code .code__container .code__sections .code__sections__social__profile{
     display: flex;
     align-items: center;
-    gap: 8px;
+    padding: 10px;
+}
+
+.app .container .code .code__container .code__sections .code__sections__social__profile img{
+    margin-right: 8px;
 }
 
 @media screen and (max-width: 800px){
@@ -80,6 +101,10 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+    }
+
+    .app .container .menu__responsive{
+        z-index: 100;
     }
 }
 

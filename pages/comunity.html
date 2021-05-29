@@ -22,9 +22,11 @@
             </div>
             <input type="text" class="search-box" placeholder="Busque por algo">
             
-            <div class="profile-image">
-                <img src="../img/profile/Author.png" alt="imagem do perfil">
-                <span>Harry</span>
+            <div class="profile">
+                <div class="profile__container">
+                    <img src="../img/profile/Author.png" alt="imagem do perfil">
+                    <span>Harry</span>
+                </div>
             </div>
             <div class="burger-menu">
                 <img src="../img/icons/burger-icon.svg" alt="burger icon menu">
@@ -32,7 +34,7 @@
         </header>
     
         <div class="container">
-            <nav class="menu menu__responsive">
+            <nav class="menu">
                 <h2>Menu</h2>
                 <ul class="menu">
                     <li class="menu__item menu__item--disabled">
@@ -49,6 +51,13 @@
                         </div>
                         <p>Comunidade</p>
                     </li>
+                    <section class="responsive">
+                        <div class="responsive--divisor"></div>
+                        <div class="responsive__profile">
+                            <img src="../img/profile/Author.png" alt="imagem do perfil">
+                            <span>Harry</span>
+                        </div>
+                    </section>
                 </ul>
             </nav>
 
@@ -83,7 +92,7 @@
                                     <span>9</span>
                                 </div>
                                 <div class="code__sections__social__interactions__like">
-                                    <img src="../img/icons/likes.svg" alt="likes icon">
+                                    <img src="../img/icons/likes.svg" alt="likes icon" class="svg">
                                     <span>9</span>
                                 </div>
                             </section>
