@@ -75,10 +75,30 @@
     gap: 8px;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
     .app .container .code{
         width: 100%;
         display: flex;
         flex-direction: column;
     }
-} 
+}
+
+@media screen and (max-width: 660px){
+    .app .container .code{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .app header .search-box{
+        display: none;
+    }
+
+    .app header .search-icon{
+        width: 5%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 36px;   
+    }
+
+}

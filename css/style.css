@@ -21,6 +21,8 @@
     --border-textarea: #6bd1ff;
     --bg-textarea: #141414;
     --color-hover: rgba(255,255,255,0.24);
+    --menu-responsive-color: #2D415B;
+    
 }
 
 *{
@@ -51,13 +53,29 @@ input:hover{
     background-color: red;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 800px){
+    .app{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .app header{
+        margin: 32px 32px;
+    }
+
     .app header .profile-image{
         display: none;
     }
 
     .app header .logo{
-        width: 28%;
+        width: 20%;
+        margin-right: 5%;
+    }
+    
+    .app header .search-box{
+        width: 67.3%;
+                
     }
     
     .app header .burger-menu{
@@ -66,17 +84,67 @@ input:hover{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    }  
+    }
 
-    .container nav{
+    .app header .close{
+        background: url('../img/icons/close.svg');
+    }
+    
+
+    .app .container nav{
         display: none;
+    }
+
+    .app .container .menu__responsive{
+        width: 31%;
+        height: 85%;
+        display: block;
+        position: absolute;
+        background: var(--menu-responsive-color);
+        top: 100px;
+        right: 30px;
+        border-radius: var(--border-radius);
+    }
+
+    .app .container .menu__responsive h2{
+        display: none;
+    }
+
+    .app .container .menu__responsive .menu{
+        width: 100%;
+        padding: 24px;
+    }
+
+    .app .container .menu__responsive .menu .responsive .responsive--divisor{
+        width: 100%;
+        height: 1px;    
+        opacity: 0.08;
+        background: var(--branco);
+        margin-top: 24px;
+        display: block;
+        
+    }
+
+    .app .container .menu__responsive .menu .responsive .responsive__profile{
+        width: 22%;
+        display: flex;
+        margin-top: 36px;
+        margin-left: 24px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .app .container .menu__responsive .menu .responsive .responsive__profile img{
+        margin-right: 8px;
     }
 
     .app .container{
         flex-direction: column;
+        margin: 32px 32px;
+        
     }
 
-    .app .container main{
+    .app .container .code{
         width: 100%;
     }
 
@@ -92,5 +160,71 @@ input:hover{
     .app .container form .customization .customization__options select{
         margin-right: 16px;
     }
+    .app .container form .customization .customization__options #color input{
+        width: 95%;
+    }
+}
 
+@media screen and (max-width: 660px){
+    .app{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .app header{
+        display: flex;
+        justify-content: space-between;
+        margin: 27px 16px;
+    }
+
+    .app header .logo{
+        width: 100%;
+    }
+
+    .app header .search-box{
+        display: none;
+    }
+
+    .app header .burger-menu{
+        width: 13%;
+        
+    }
+
+    .app header .search-icon{
+        width: 5%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 36px;
+        
+    }
+
+    .app .container .menu__responsive{
+        right: 15px;
+        width: 60%;
+    }
+
+    .app .container{
+        flex-direction: column;
+        margin: 16px;
+    }
+
+    .app .container .code{
+        
+        width: 100%;
+    }
+
+    .app .container form{
+        width: 100%;
+        
+    }
+
+    .app .container form .customization .customization__options{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .app .container form .customization .customization__options #color input{
+        width: 95%;
+    }
 }

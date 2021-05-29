@@ -8,6 +8,10 @@
     width: 20%;
 }
 
+.app header .search-icon{
+    display: none;
+}
+
 .app header .search-box{
     width: 55%;
     height: 56px;
