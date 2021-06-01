@@ -16,7 +16,7 @@ burgerMenu.addEventListener('click', ()=>{
     nav.classList.toggle('menu__responsive');
 });
 
-searchIcon.addEventListener('click', (ev)=>{
+searchIcon.addEventListener('click', ()=>{
     document.querySelector('.logo').style.display = 'none';
     searchIcon.querySelector('img').style.display = 'none';
     document.querySelector('.search-box').style.display = 'block';

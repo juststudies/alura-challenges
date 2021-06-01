@@ -1,12 +1,12 @@
 const color = document.querySelector('input[type="color"]');
-const border = document.querySelector('.textarea--border');
-const form = document.querySelector('form');
+const border = document.querySelector('.code--border');
+
 
 function changeColor(){
     border.style.backgroundColor = color.value;
 }
 
-form.addEventListener('submit', (e)=>{
+color.addEventListener('change', (e)=>{
     e.preventDefault();
     changeColor();
-}, true);
+});
