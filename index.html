@@ -70,7 +70,9 @@
             <main class="code">
                 <div class="code__wrapper code--border">
                     <div class="mac-buttons"></div>
-                    <code class="hljs" contenteditable="true" aria-label="editor"></code>
+                    <div class="code__editor">
+                        <code class="preview hljs" contenteditable="true" aria-label="editor"></code>
+                    </div>
                 </div>
                 <button class="code__button">Visualizar com o Highlight</button>
             </main>
@@ -86,8 +88,8 @@
                 <div class="customization">
                     <h2>Personalização</h2>
                     <div class="customization__options">
-                        <select>
-                            <option value="javascript">JavaScript</option>
+                        <select class="languages">
+                            <option value="javascript" selected>JavaScript</option>
                             <option value="html">HTML</option>
                             <option value="css">CSS</option>
                         </select>
@@ -100,7 +102,7 @@
             </form>
         </div>
     </div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script src="./js/hljs.js"></script>
     <script src="./js/handleClicks.js"></script>
     <script src="./js/colorChanger.js"></script>

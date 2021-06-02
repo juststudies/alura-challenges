@@ -1,13 +1,11 @@
-const codeWrapper = document.querySelector('.code__wrapper');
-const selectLanguage = document.querySelector('.customization__options').firstChild;
+const codeEditor = document.querySelector('.code__editor');
+const selectLanguage = document.querySelector('.languages');
 const previewHighlight = document.querySelector('.code__button');
-const previewHighlight = document.querySelector('button');
 
 function changeLanguage(){
-    const code = codeWrapper.querySelector('code');
-    codeWrapper.querySelector('code').innerHTML = `<code class="hljs ${selectLanguage.value}" contenteditable="true" aria-label="editor"></code>`;
-    codeWrapper.querySelector('code').innerText = code.innerText;  
-
+    const code = codeEditor.querySelector('code');
+    codeEditor.innerHTML = `<code class="preview hljs ${selectLanguage.value}" contenteditable="true" aria-label="editor"></code>`;
+    codeEditor.firstChild.innerText = code.innerText;  
 }
 
 selectLanguage.addEventListener('change', ()=>{
@@ -15,6 +13,6 @@ selectLanguage.addEventListener('change', ()=>{
 });
 
 previewHighlight.addEventListener('click', ()=>{
-    const code = codeWrapper.querySelector('code');
-    hljs.highlightElement(code);
+    const code = codeEditor.querySelector('code');
+    hljs.highlightBlock(code);
 });
