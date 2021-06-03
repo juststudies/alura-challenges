@@ -1,0 +1,125 @@
+@media screen and (max-width: 800px){
+    #app{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #app header{
+        margin: 32px 32px;
+    }
+
+    #app header .profile{
+        display: none;
+    }
+
+    #app header .logo{
+        width: 20%;
+        margin-right: 5%;
+    }
+    
+    #app header .search-box{
+        width: 62.9%;
+                
+    }
+    
+    #app header .burger-menu{
+        height: 56px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 14px;
+        margin-left: 20px;
+    }
+
+    #app header .burger-menu:hover{
+        background: var(--bg-burger-hover-color);
+        border-radius: 16px;
+    }
+
+    #app header .burger-menu:active{
+        background: var(--bg-burger-active-color);
+    }
+
+    #app header .close{
+        background: url('../../img/icons/close.svg');
+    }
+    
+
+    #app .container nav{
+        display: none;
+    }
+
+    #app .container .menu__responsive{
+        width: 31%;
+        height: 85%;
+        display: block;
+        position: absolute;
+        background: var(--menu-responsive-color);
+        top: 100px;
+        right: 30px;
+        border-radius: var(--border-radius);
+    }
+
+    #app .container .menu__responsive h2{
+        display: none;
+    }
+
+    #app .container .menu__responsive .menu{
+        width: 100%;
+        padding: 24px;
+    }
+
+    #app .container .menu__responsive .menu .responsive{
+        display: block;
+    }
+
+    #app .container .menu__responsive .menu .responsive .responsive--divisor{
+        width: 100%;
+        height: 1px;    
+        opacity: 0.08;
+        background: var(--branco);
+        margin-top: 24px;
+        display: block;
+        
+    }
+
+    #app .container .menu__responsive .menu .responsive .responsive__profile{
+        width: 22%;
+        display: flex;
+        margin-top: 36px;
+        margin-left: 24px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #app .container .menu__responsive .menu .responsive .responsive__profile img{
+        margin-right: 8px;
+    }
+
+    #app .container{
+        flex-direction: column;
+        margin: 32px 32px;
+        
+    }
+
+    #app .container .code{
+        width: 100%;
+    }
+
+    #app .container form{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    #app .container form .customization .customization__options{
+        display: flex;
+    }
+
+    #app .container form .customization .customization__options select{
+        margin-right: 16px;
+    }
+    #app .container form .customization .customization__options #color input{
+        width: 95%;
+    }
+}

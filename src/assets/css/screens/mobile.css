@@ -1,0 +1,63 @@
+@media screen and (max-width: 660px){
+    #app{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #app header{
+        display: flex;
+        justify-content: space-between;
+        margin: 27px 16px;
+    }
+
+    #app header .logo{
+        width: 100%;
+    }
+
+    #app header .search-box{
+        display: none;
+    }
+
+    #app header .burger-menu{
+        width: 13%;
+        
+    }
+
+    #app header .search-icon{
+        width: 5%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 36px;
+        
+    }
+
+    #app .container .menu__responsive{
+        right: 15px;
+        width: 60%;
+    }
+
+    #app .container{
+        flex-direction: column;
+        margin: 16px;
+    }
+
+    #app .container .code{
+        
+        width: 100%;
+    }
+
+    #app .container form{
+        width: 100%;
+        
+    }
+
+    #app .container form .customization .customization__options{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #app .container form .customization .customization__options #color input{
+        width: 95%;
+    }
+}
