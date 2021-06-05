@@ -1,24 +1,37 @@
 <template>
     <main class="code">
         <div class="code__wrapper code--border">
-            <div class="mac-buttons"></div>
-            
-            <div class="code__editor">
-                <code class="preview hljs" contenteditable="true" aria-label="editor"></code>
+            <div class="code__highlight">
+                <div class="mac-buttons"></div>
+                <div class="code__editor">
+                    <code 
+                        class="preview hljs"
+                        contenteditable="true" 
+                        aria-label="editor"
+                        
+                    ></code>
+                </div>
             </div>
         </div>
-        <button class="code__button">Visualizar com o Highlight</button>
+        <button class="code__button" @click="highlightVisualize()">Visualizar com o Highlight</button>
     </main>
 </template>
 
 <script>
+    import hljs from 'highlight.js';
     export default {
-        name:'Editor'
-        
+        name:'Editor',
+        methods:{
+            highlightVisualize(){
+                const codeEditor = document.querySelector('.code__editor');
+                const code = codeEditor.querySelector('code');
+                hljs.highlightElement(code);
+            }
+        }
     }
 </script>
 
-<style scoped>
+<style>
     .code{
         display: flex;
         flex-direction: column;
@@ -35,9 +48,16 @@
 
     .code .code__wrapper{
         width: 100%;
+        height: 366px;
     }
 
-    .code .code__wrapper .mac-buttons{
+    .code .code__wrapper .code__highlight{
+        height: 100%;
+        background: var(--bg-textarea);
+        border-radius: var(--border-radius);
+    }
+
+    .code .code__wrapper .code__highlight .mac-buttons{
         width: 100%;
         height: 34px;
         display: flex;
@@ -50,12 +70,13 @@
         margin-bottom: -6px;
     }
 
-    .code .code__wrapper code{
+    
+
+    .code .code__wrapper .code__highlight .code__editor code{
         width: 100%;
-        height: 302px;
+        height: 234px;
         display: block;
         border: none;
-        border-radius: var(--border-radius);
         background-color: var(--bg-textarea);
         padding: 24px 16px;
         color: var(--branco);

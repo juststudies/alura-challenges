@@ -9,29 +9,80 @@
         <div class="customization">
             <h2>Personalização</h2>
             <div class="customization__options">
-                <select class="languages">
-                    <option value="javascript" selected>JavaScript</option>
-                    <option value="html">HTML</option>
-                    <option value="css">CSS</option>
+                <select 
+                    class="customization__languages" 
+                    @change="changeLanguage()"                    
+                >
+                    <option v-for="option in options" :selected="option == 'javascript'" v-bind:key="option.id">
+                        {{option.name}}
+                    </option>
                 </select>
                 <div id="color">
-                    <input type="color" value="#6BD1FF"/>
+                    <input 
+                        type="color"
+                        value="#6BD1FF"
+                        @change="handleInputColor()"
+                    />
                 </div>
             </div>
         </div>
-        <button type="submit">Salvar projeto</button>
+        <button type="submit" @click="handleSubmit()">Salvar projeto</button>
     </form>
 </template>
 
 <script>
     export default {
-        name: 'Form'
+        name: 'Form',
+        data(){
+            return{
+                
+                options:[
+                    {
+                        id:0,
+                        name: 'javascript'
+                    },
+                    {
+                        id:1,
+                        name: 'html'
+                    },
+                    {
+                        id:2,
+                        name:'css'
+                    }
+                ]
+            }
+        },
+        methods: {
+            changeColor(){
+                const border = document.querySelector('.code--border');
+                const color = document.querySelector('input[type="color"]');
+                border.style.backgroundColor = color.value;
+            },
+
+            handleInputColor(){
+                this.changeColor();
+            },
+
+            changeLanguage(){
+                const codeEditor = document.querySelector('.code__editor');
+                const selectLanguage = document.querySelector('.customization__languages');
+                const code = codeEditor.querySelector('code');
+                codeEditor.innerHTML = `<code class="preview hljs ${selectLanguage.value}" contenteditable="true" aria-label="editor"></code>`;
+
+                codeEditor.firstChild.innerText = code.innerText;  
+            },
+
+            handleSubmit(e){
+                e.preventDefault();
+            }
+        }
     }
 </script>
 
-<style scoped>
+<style>
     form{
         width: 20%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         color: var(--branco);
@@ -42,14 +93,13 @@
         height: 18px;
         font-weight: normal;
         font-size: 12px;
-        line-height: 24px;
         letter-spacing: 0.4em;
         text-transform: uppercase;
     }
 
     form .project .project__title,
     form .project .project__description,
-    form .customization select{
+    form .customization .customization__languages{
         height: 56px;
         width: 100%;
         margin-top: 16px;
@@ -69,7 +119,7 @@
 
     form .project .project__description:hover,
     form .project .project__title:hover,
-    form .customization select:hover{
+    form .customization .customization__languages:hover{
         background: var(--color-hover);
     }
 
@@ -77,15 +127,16 @@
         margin-top: 40px;
     }
 
-    form .customization select{
+    form .customization .customization__languages{
         appearance: none;
         background-image: url('../assets/img/icons/arrow-down.svg');
         background-repeat: no-repeat;
         background-position: 95.15% 50%;
         color: rgba(255, 255, 255, 0.64);
+        text-transform: capitalize;
     }
 
-    form .customization select option{
+    form .customization .customization__languages option{
         background-color: var(--bg);
     }
 

@@ -2,33 +2,27 @@
     <div>
         <Header />
         <div class="container">
-            <Menu/>
-            <Editor />
-            <Form/>
+            
+            <router-view></router-view>
         </div>
     </div>
 </template>
 
 <script>
     import Header from './Header';
-    import Menu from './Menu';
-    import Editor from './Editor';
-    import Form from './Form';
+    
     export default {
         name: 'Main',
         components: {
-            Header, 
-            Menu,
-            Editor,
-            Form            
+            Header,
         }
     }
 </script>
 
-<style scoped>
-.container{
-    display: flex;
-    margin-top: 40px;
-    justify-content: space-between;
-}
+<style>
+    .container{
+        display: flex;
+        margin-top: 40px;
+        justify-content: space-between;
+    }
 </style>

@@ -18,6 +18,7 @@ export default {
 <style scoped>
 @import url('./assets/css/__reset.css');
 @import url('./assets/css/__global.css');
+@import url('./assets/css/dracula.css');
 @import url('./assets/css/screens/tablet.css');
 @import url('./assets/css/screens/mobile.css');
 
