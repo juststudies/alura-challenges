@@ -9,6 +9,7 @@
                         <option value="svg">SVG</option>
                         <option value="jpg">JPG</option>
                     </select>
+                    <button @click="save">Salvar</button>
                 </div>
                 <div class="code__editor">
                     <code 
@@ -26,6 +27,8 @@
 
 <script>
     import hljs from 'highlight.js';
+    import domtoimage from 'dom-to-image';
+    import {saveAs} from 'file-saver';
     export default {
         name:'Editor',
         methods:{
@@ -33,12 +36,51 @@
                 const codeEditor = document.querySelector('.code__editor');
                 const code = codeEditor.querySelector('code');
                 hljs.highlightElement(code);
+            },
+
+            save(){
+                const selectExtension = document.querySelector('.save select');
+                const code = document.querySelector('.code__editor');
+                
+                function filter (node) {
+                    return (node.tagName !== 'i');
+                }
+                
+                if(selectExtension.value == 'svg'){
+                    domtoimage.toSvg(code, {
+                        quality: 1.0,
+                        bgcolor: "white",
+                        filter: filter
+                    })
+                    .then(dataUrl2 => {
+                        let link = document.createElement('a');
+                        link.download = "aluradev.svg";
+                        link.href = dataUrl2;
+                        link.click();
+                    });
+                }
+            
+                else if(selectExtension.value == 'png'){
+                    domtoimage.toPng(code).then(function(blob){
+                        saveAs(blob, "aluradev.png");
+                    });
+                }
+
+                else if(selectExtension.value == 'jpg'){
+                    domtoimage.toJpeg(code).then(dataUrl=>{
+                        let link = document.createElement('a');
+                        link.download = "aluradev.jpg";
+                        link.href = dataUrl;
+                        link.click()
+                    });
+                }
+        
             }
         }
     }
 </script>
 
-<style scoped>
+<style>
     .code{
         display: flex;
         flex-direction: column;
