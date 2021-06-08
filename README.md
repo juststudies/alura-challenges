@@ -1,24 +1,37 @@
-# aluradev
+# AluraDev
 
-## Project setup
-```
-npm install
-```
+![Página Inicial](https://i.imgur.com/Hw9RxQF.png)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![Página Comunidade](https://i.imgur.com/3PgnMKu.png)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## O que é ?
 
-### Lints and fixes files
-```
-npm run lint
-```
+AluraDev é um site desenvolvido para as semanas da alura challenges, semana esta que visa o desenvolvimento de aplicações bem parecido com o que é na realidade, utilizando trello, mordendo o coleguinha e demais coisas.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+ - [x] Header Concluído.
+ - [x] NavBar concluída.
+ - [x] Form da aplicação.
+ - [x] Editor central.
+ - [x] Pagina da comunidade.
+
+
+## Tecnologias utilizadas:
+
+ - HTML
+ - CSS
+ - JAVASCRIPT
+ - GIT
+
+## Como rodar o projeto:
+
+Para rodar o projeto localmente basta clonar o repositório:
+
+`git clone https://github.com/juststudies/alura-challenges`
+
+Instalar as dependências:
+
+`npm install`
+
+E rodar no servidor local:
+
+`npm run serve`
