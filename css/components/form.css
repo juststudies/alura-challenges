@@ -1,0 +1,101 @@
+.app .container form{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    color: var(--branco);
+}
+
+.app .container form .project h2,
+.app .container form .customization h2{
+    height: 18px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+}
+
+.app .container form .project .project__title,
+.app .container form .project .project__description,
+.app .container form .customization select{
+    height: 56px;
+    width: 100%;
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: var(--bg-opacity);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    color: var(--branco);
+}
+
+.app .container form .project .project__description{
+    resize: none;
+    height: 80px;
+    font-family: var(--font-family);
+}
+
+.app .container form .project .project__description:hover,
+.app .container form .project .project__title:hover,
+.app .container form .customization select:hover{
+    background: var(--color-hover);
+}
+
+.app .container form .customization{
+    margin-top: 40px;
+}
+
+.app .container form .customization select{
+    appearance: none;
+    background-image: url('../../img/icons/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: 95.15% 50%;
+    color: rgba(255, 255, 255, 0.64);
+}
+
+.app .container form .customization select option{
+    background-color: var(--bg);
+}
+
+.app .container form .customization #color{
+    width: 100%;
+    height: 56px;
+    margin-top: 1rem;
+    border-radius: var(--border-radius);
+
+    border: 1px solid var(--border-color);
+}
+
+.app .container form .customization #color input{
+    width: 94%;
+    border: none;
+    height: 40px;
+    appearance: none;
+    margin: 8px;
+    border-radius: 4px;
+}
+
+.app .container form [type="submit"]{
+    width: 100%;
+    height: 56px;
+    margin-top: 32px;
+    background-color: var(--submit-button-background);
+    color: var(--submit-button-color);
+    border: 0;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.app .container form [type="submit"]:hover{
+    background: var(--submit-button-bg-hover);
+}
+
+.app .container form [type="submit"]:active{
+    border: 4px solid var(--submit-button-bg-pressed);
+}
+
+.app .container form [type="submit"]:focus{
+    background: var(--submit-button-bg-focus);
+}

@@ -1,0 +1,250 @@
+@import url('./components/header.css');
+@import url('./components/nav.css');
+@import url('./components/form.css');
+@import url('./components/main.css');
+
+:root{
+    --branco: #FFF;
+    --bg: #051D3B;
+    --submit-button-color: var(--bg);
+    --submit-button-bg-hover: #7BA4FC;
+    --submit-button-bg-pressed: rgba(80, 129, 251, 0.72);
+    --submit-button-bg-focus: #96B9FD;
+    --border-radius: 8px;
+    --font-family: 'Inter', sans-serif;
+    --icon-bg: #5081FB;
+    --bg-sections-opacity-color:rgba(0, 0, 0, 0.16);
+    --bg-opacity: rgba(255, 255, 255, 0.16);
+    --border-color: #C4C4C4;
+    --button-color: rgba(80, 129, 251, 0.08);
+    --submit-button-background:var(--icon-bg);
+    --border-textarea: #6bd1ff;
+    --bg-textarea: #141414;
+    --color-hover: rgba(255,255,255,0.24);
+    --menu-responsive-color: #2D415B;
+    --bg-hover-color: rgba(255, 255, 255, 0.08);
+    --bg-burger-hover-color: rgba(80, 129, 251, 0.08);
+    --bg-burger-active-color: rgba(80, 129, 251, 0.16);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    width: 100%;
+    height: 100%;
+}
+
+.app{
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family);
+    padding: 2rem 2rem;
+    
+}
+
+.container{
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.app .container .menu .responsive{
+    display: none;
+}
+
+
+@media screen and (max-width: 800px){
+    .app{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .app header{
+        margin: 32px 32px;
+    }
+
+    .app header .profile{
+        display: none;
+    }
+
+    .app header .logo{
+        width: 20%;
+        margin-right: 5%;
+    }
+    
+    .app header .search-box{
+        width: 62.9%;
+                
+    }
+    
+    .app header .burger-menu{
+        height: 56px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 14px;
+        margin-left: 20px;
+    }
+
+    .app header .burger-menu:hover{
+        background: var(--bg-burger-hover-color);
+        border-radius: 16px;
+    }
+
+    .app header .burger-menu:active{
+        background: var(--bg-burger-active-color);
+    }
+
+    .app header .close{
+        background: url('../img/icons/close.svg');
+    }
+    
+
+    .app .container nav{
+        display: none;
+    }
+
+    .app .container .menu__responsive{
+        width: 31%;
+        height: 85%;
+        display: block;
+        position: absolute;
+        background: var(--menu-responsive-color);
+        top: 100px;
+        right: 30px;
+        border-radius: var(--border-radius);
+    }
+
+    .app .container .menu__responsive h2{
+        display: none;
+    }
+
+    .app .container .menu__responsive .menu{
+        width: 100%;
+        padding: 24px;
+    }
+
+    .app .container .menu__responsive .menu .responsive{
+        display: block;
+    }
+
+    .app .container .menu__responsive .menu .responsive .responsive--divisor{
+        width: 100%;
+        height: 1px;    
+        opacity: 0.08;
+        background: var(--branco);
+        margin-top: 24px;
+        display: block;
+        
+    }
+
+    .app .container .menu__responsive .menu .responsive .responsive__profile{
+        width: 22%;
+        display: flex;
+        margin-top: 36px;
+        margin-left: 24px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .app .container .menu__responsive .menu .responsive .responsive__profile img{
+        margin-right: 8px;
+    }
+
+    .app .container{
+        flex-direction: column;
+        margin: 32px 32px;
+        
+    }
+
+    .app .container .code{
+        width: 100%;
+    }
+
+    .app .container form{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .app .container form .customization .customization__options{
+        display: flex;
+    }
+
+    .app .container form .customization .customization__options select{
+        margin-right: 16px;
+    }
+    .app .container form .customization .customization__options #color input{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .app{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .app header{
+        display: flex;
+        justify-content: space-between;
+        margin: 27px 16px;
+    }
+
+    .app header .logo{
+        width: 100%;
+    }
+
+    .app header .search-box{
+        display: none;
+    }
+
+    .app header .burger-menu{
+        width: 13%;
+        
+    }
+
+    .app header .search-icon{
+        width: 5%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 36px;
+        
+    }
+
+    .app .container .menu__responsive{
+        right: 15px;
+        width: 60%;
+    }
+
+    .app .container{
+        flex-direction: column;
+        margin: 16px;
+    }
+
+    .app .container .code{
+        
+        width: 100%;
+    }
+
+    .app .container form{
+        width: 100%;
+        
+    }
+
+    .app .container form .customization .customization__options{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .app .container form .customization .customization__options #color input{
+        width: 95%;
+    }
+}

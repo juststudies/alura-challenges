@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./comunity-styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <title>AluraDev</title>
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="logo">
+                <img src="../img/logo/Logo.svg" alt="Logo Alura Dev">
+            </div>
+            <div class="search-icon">
+                <img src="../img/icons/search.svg" alt="search icon">
+            </div>
+            <input type="text" class="search-box" placeholder="Busque por algo">
+            
+            <div class="profile">
+                <div class="profile__container">
+                    <img src="../img/profile/Author.png" alt="imagem do perfil">
+                    <span>Nicolas</span>
+                </div>
+            </div>
+            <div class="burger-menu">
+                <img src="../img/icons/burger-icon.svg" alt="burger icon menu">
+            </div>
+        </header>
+    
+        <div class="container">
+            <nav class="menu">
+                <h2>Menu</h2>
+                <ul class="menu">
+                    <li class="menu__item menu__item--disabled">
+                        <a href="../index.html">
+                            <div class="menu__icon">
+                                <img src="../img/icons/code.svg" alt="code icon">
+                            </div>
+                            <p>Editor de Código</p>                                      
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <div class="menu__icon">
+                            <img src="../img/icons/comunity.svg" alt="comunity icon">
+                        </div>
+                        <p>Comunidade</p>
+                    </li>
+                    <section class="responsive">
+                        <div class="responsive--divisor"></div>
+                        <div class="responsive__profile">
+                            <img src="../img/profile/Author.png" alt="imagem do perfil">
+                            <span>Nicolas</span>
+                        </div>
+                    </section>
+                </ul>
+            </nav>
+
+            <main class="code">
+                
+                <div class="code__container">
+                    <div class="code__wrapper code--border" style="background-color: #9AFF6B;">
+                        <div id="mac-buttons"></div>
+                        <code>
+                            const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                            <br><br>
+                            const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                            <br><br>
+                            const unfold = (f, seed) => {
+                                const go = (f, seed, acc) => {
+                                    const res = f(seed)
+                                    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                                }
+                                return go(f, seed, [])
+                            }
+                        </code>
+                    </div>
+                    <div class="code__sections">
+                        <section class="code__sections__info">
+                            <h2>Título do projeto</h2>
+                            <p>Essa é a descrição do meu projeto.</p>
+                        </section>
+                        <div class="code__sections__social">
+                            <section class="code__sections__social__interactions">
+                                <div class="code__sections__social__interactions__comments">
+                                    <img src="../img/icons/comments.svg" alt="comments icon">
+                                    <span>9</span>
+                                </div>
+                                <div class="code__sections__social__interactions__like">
+                                    <img src="../img/icons/likes.svg" alt="likes icon" class="svg">
+                                    <span>9</span>
+                                </div>
+                            </section>
+                            <section class="code__sections__social__profile">
+                                <img src="../img/profile/Author.png" alt="author image">
+                                <span>@Nicolas</span>
+                            </section>
+                        </div>
+                    </div>
+                </div>                
+                
+                
+                <div class="code__container">
+                    <div class="code__wrapper code--border" style="background-color: #6B83FF;">
+                        <div id="mac-buttons"></div>
+                        <code>
+                            const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                            <br><br>
+                            const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                            <br><br>
+                            const unfold = (f, seed) => {
+                                const go = (f, seed, acc) => {
+                                    const res = f(seed)
+                                    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                                }
+                                return go(f, seed, [])
+                            }
+                        </code>
+                    </div>
+                    <div class="code__sections">
+                        <section class="code__sections__info">
+                            <h2>Título do projeto</h2>
+                            <p>Essa é a descrição do meu projeto.</p>
+                        </section>
+                        <div class="code__sections__social">
+                            <section class="code__sections__social__interactions">
+                                <div class="code__sections__social__interactions__comments">
+                                    <img src="../img/icons/comments.svg" alt="comments icon">
+                                    <span>9</span>
+                                </div>
+                                <div class="code__sections__social__interactions__like">
+                                    <img src="../img/icons/likes.svg" alt="likes icon">
+                                    <span>9</span>
+                                </div>
+                            </section>
+                            <section class="code__sections__social__profile">
+                                <img src="../img/profile/Author.png" alt="author image">
+                                <span>@Nicolas</span>
+                            </section>
+                        </div>
+                    </div>
+                </div>                
+                
+                <div class="code__container">
+                    <div class="code__wrapper code--border" style="background-color: #FFC46B;">
+                        <div id="mac-buttons"></div>
+                        <code>
+                            const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                            <br><br>
+                            const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                            <br><br>
+                            const unfold = (f, seed) => {
+                                const go = (f, seed, acc) => {
+                                    const res = f(seed)
+                                    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                                }
+                                return go(f, seed, [])
+                            }
+                        </code>
+                    </div>
+                    <div class="code__sections">
+                        <section class="code__sections__info">
+                            <h2>Título do projeto</h2>
+                            <p>Essa é a descrição do meu projeto.</p>
+                        </section>
+                        <div class="code__sections__social">
+                            <section class="code__sections__social__interactions">
+                                <div class="code__sections__social__interactions__comments">
+                                    <img src="../img/icons/comments.svg" alt="comments icon">
+                                    <span>9</span>
+                                </div>
+                                <div class="code__sections__social__interactions__like">
+                                    <img src="../img/icons/likes.svg" alt="likes icon">
+                                    <span>9</span>
+                                </div>
+                            </section>
+                            <section class="code__sections__social__profile">
+                                <img src="../img/profile/Author.png" alt="author image">
+                                <span>@Nicolas</span>
+                            </section>
+                        </div>
+                    </div>
+                </div>                
+                
+                <div class="code__container">
+                    <div class="code__wrapper code--border" style="background-color: #FF6BCD;">
+                        <div id="mac-buttons"></div>
+                        <code>
+                            const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                            <br><br>
+                            const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                            <br><br>
+                            const unfold = (f, seed) => {
+                                const go = (f, seed, acc) => {
+                                    const res = f(seed)
+                                    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                                }
+                                return go(f, seed, [])
+                            }
+                        </code>
+                    </div>
+                    <div class="code__sections">
+                        <section class="code__sections__info">
+                            <h2>Título do projeto</h2>
+                            <p>Essa é a descrição do meu projeto.</p>
+                        </section>
+                        <div class="code__sections__social">
+                            <section class="code__sections__social__interactions">
+                                <div class="code__sections__social__interactions__comments">
+                                    <img src="../img/icons/comments.svg" alt="comments icon">
+                                    <span>9</span>
+                                </div>
+                                <div class="code__sections__social__interactions__like">
+                                    <img src="../img/icons/likes.svg" alt="likes icon">
+                                    <span>9</span>
+                                </div>
+                            </section>
+                            <section class="code__sections__social__profile">
+                                <img src="../img/profile/Author.png" alt="author image">
+                                <span>@Nicolas</span>
+                            </section>
+                        </div>
+                    </div>
+                </div>               
+
+            </main>
+        </div>
+    </div>
+    <script src="./comunity-scripts/handleClicks.js"></script>
+</body>
+</html>
