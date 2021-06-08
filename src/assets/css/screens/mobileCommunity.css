@@ -1,0 +1,11 @@
+@media screen and (max-width: 800px){
+    .code{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu__responsive{
+        z-index: 100;
+    }
+}

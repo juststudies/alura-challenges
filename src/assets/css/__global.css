@@ -1,5 +1,7 @@
 :root{
-    --branco: #FFF;
+    --branco: rgb(255, 255, 255);
+    --branco-opacity: rgba(255, 255, 255, 0.56);
+    --branco-opacity-strong: rgba(255, 255, 255, 0.72);
     --bg: #051D3B;
     --submit-button-color: var(--bg);
     --submit-button-bg-hover: #7BA4FC;
@@ -7,7 +9,9 @@
     --submit-button-bg-focus: #96B9FD;
     --border-radius: 8px;
     --font-family: 'Inter', sans-serif;
-    --icon-bg: #5081FB;
+    --icon-bg: rgba(80, 129, 251, 1);
+    --icon-bg-opacity: rgba(80, 129, 251, 0.16);
+    --icon-bg-opacity-strong: rgba(80, 129, 251, 0.64);
     --bg-sections-opacity-color:rgba(0, 0, 0, 0.16);
     --bg-opacity: rgba(255, 255, 255, 0.16);
     --border-color: #C4C4C4;
@@ -19,7 +23,7 @@
     --menu-responsive-color: #2D415B;
     --bg-hover-color: rgba(255, 255, 255, 0.08);
     --bg-burger-hover-color: rgba(80, 129, 251, 0.08);
-    --bg-burger-active-color: rgba(80, 129, 251, 0.16);
+    --bg-burger-active-color: var(--icon-bg-opacity);
 }
 
 *{

@@ -3,17 +3,23 @@
         <h2>Menu</h2>
         <ul class="menu">
             <li class="menu__item">
-                <div class="menu__icon">
-                    <img src="../assets/img/icons/code.svg" alt="code icon">
+                <div class="menu__link">
+                    <router-link to="/" exact>
+                        <div class="menu__icon">
+                            <img src="../assets/img/icons/code.svg" alt="code icon">
+                        </div>
+                        <p>Editor de Código</p>
+                    </router-link>
                 </div>
-                <p>Editor de Código</p>                                      
             </li>
-            <li class="menu__item menu__item--disabled">
-                <div class="menu__link" href="#">
-                    <div class="menu__icon">
-                        <img src="../assets/img/icons/comunity.svg" alt="comunity icon">
-                    </div>
-                    <p><router-link to="/community">Comunidade</router-link></p>
+            <li class="menu__item">
+                <div class="menu__link menu__item--disabled">
+                    <router-link to="/community" >
+                        <div class="menu__icon">
+                            <img src="../assets/img/icons/comunity.svg" alt="comunity icon">
+                        </div>
+                        <p>Comunidade</p>
+                    </router-link>
                 </div>
             </li>
             <section class="responsive">
@@ -30,7 +36,6 @@
 <script>
     export default {
         name: 'Menu',
-        
     }
 </script>
 
@@ -57,14 +62,14 @@ nav .menu .menu__item {
     margin-top: 16px;
 }
 
-nav .menu .menu__item .menu__link,
-nav .menu .menu__item .menu__icon,
-nav .menu .menu__item p{
+nav .menu .menu__item .menu__link .router-link-active,
+nav .menu .menu__item .menu__link a,
+nav .menu .menu__item .menu__link .menu__icon,
+nav .menu .menu__item .menu__link p{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 nav .menu .menu__item .menu__icon{
     width: 3rem;
@@ -74,12 +79,17 @@ nav .menu .menu__item .menu__icon{
     margin-right: 1rem;
 }
 
-nav .menu .menu__item--disabled{
+nav .menu .menu__item .menu__link{
     opacity: 16%;
 }
 
-nav .menu .menu__item--disabled:hover{
+nav .menu .menu__item .menu__link:hover{ 
     opacity: 64%;
+}
+
+nav .menu .menu__item .menu__link:not(.menu__item--disabled),
+nav .menu .menu__item .menu__link:not(.menu__item--disabled):hover{
+    opacity: 100%;
 }
 
 

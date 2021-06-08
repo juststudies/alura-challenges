@@ -1,30 +1,28 @@
 <template>
     <div class="container">
-        <Menu/>
+        <Menu />
         <Editor />
-        <Form/>
+        <Form />
     </div>
 </template>
 
 <script>
-    import Editor from './Editor';
-    import Form from './Form';
-    import Menu from './Menu';
-    
+    import Editor from './Editor.vue';
+    import Form from './Form.vue';
+    import Menu from './Menu.vue';
     export default {
         components:{
             Editor,
             Form,
             Menu
-        }    
+        }
     }
 </script>
 
-<style scoped>
+<style>
     .container{
-        width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-top: 0;
+        margin-top: 40px;
     }
 </style>

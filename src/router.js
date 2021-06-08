@@ -1,12 +1,12 @@
 import VueRouter from 'vue-router';
-import CodeEditor from './components/CodeEditor.vue';
+import Container from './components/Container.vue';
 import Community from './components/Pages/Community.vue';
 
 const routes = [
     {
         path: '/',
-        name: 'codeeditor',
-        component: CodeEditor
+        name: 'Container',
+        component: Container
     },
     {
         path: '/community',

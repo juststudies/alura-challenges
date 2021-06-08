@@ -3,6 +3,13 @@
         <div class="code__wrapper code--border">
             <div class="code__highlight">
                 <div class="mac-buttons"></div>
+                <div class="save">
+                    <select name="extensions" >
+                        <option value="png">PNG</option>
+                        <option value="svg">SVG</option>
+                        <option value="jpg">JPG</option>
+                    </select>
+                </div>
                 <div class="code__editor">
                     <code 
                         class="preview hljs"
@@ -31,7 +38,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .code{
         display: flex;
         flex-direction: column;
@@ -70,8 +77,6 @@
         margin-bottom: -6px;
     }
 
-    
-
     .code .code__wrapper .code__highlight .code__editor code{
         width: 100%;
         height: 234px;
@@ -85,7 +90,6 @@
         font-family: 'Roboto', sans-serif;
         overflow: auto;
     }
-
 
     .code .code__button{
         height: 56px;

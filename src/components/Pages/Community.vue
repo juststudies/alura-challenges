@@ -20,30 +20,31 @@
                     </code>
                 </div>
                 <div class="code__sections">
-                    <section class="code__sections__info">
+                    <section class="sections__info">
                         <h2>Título do projeto</h2>
                         <p>Essa é a descrição do meu projeto.</p>
                     </section>
-                    <div class="code__sections__social">
-                        <section class="code__sections__social__interactions">
-                            <div class="code__sections__social__interactions__comments">
+                    <div class="sections__social">
+                        <section class="social__interactions">
+                            <div class="social__interactions__comments">
                                 <img src="../../assets/img/icons/comments.svg" alt="comments icon">
                                 <span>9</span>
                             </div>
-                            <div class="code__sections__social__interactions__like">
-                                <img src="../../assets/img/icons/likes.svg" alt="likes icon" class="svg">
+                            <div class="social__interactions__like">
+                                <img 
+                                    src="../../assets/img/icons/likes.svg"
+                                    alt="likes icon"                                  
+                                >
                                 <span>9</span>
                             </div>
                         </section>
-                        <section class="code__sections__social__profile">
+                        <section class="social__profile">
                             <img src="../../assets/img/profile/Author.png" alt="author image">
                             <span>@Nicolas</span>
                         </section>
                     </div>
                 </div>
-            </div>                
-            
-            
+            </div>            
             <div class="code__container">
                 <div class="code__wrapper code--border" style="background-color: #6B83FF;">
                     <div class="mac-buttons"></div>
@@ -62,29 +63,31 @@
                     </code>
                 </div>
                 <div class="code__sections">
-                    <section class="code__sections__info">
+                    <section class="sections__info">
                         <h2>Título do projeto</h2>
                         <p>Essa é a descrição do meu projeto.</p>
                     </section>
-                    <div class="code__sections__social">
-                        <section class="code__sections__social__interactions">
-                            <div class="code__sections__social__interactions__comments">
+                    <div class="sections__social">
+                        <section class="social__interactions">
+                            <div class="social__interactions__comments">
                                 <img src="../../assets/img/icons/comments.svg" alt="comments icon">
                                 <span>9</span>
                             </div>
-                            <div class="code__sections__social__interactions__like">
-                                <img src="../../assets/img/icons/likes.svg" alt="likes icon">
+                            <div class="social__interactions__like">
+                                <img 
+                                    src="../../assets/img/icons/likes.svg"
+                                    alt="likes icon"                                  
+                                >
                                 <span>9</span>
                             </div>
                         </section>
-                        <section class="code__sections__social__profile">
+                        <section class="social__profile">
                             <img src="../../assets/img/profile/Author.png" alt="author image">
                             <span>@Nicolas</span>
                         </section>
                     </div>
                 </div>
-            </div>                
-            
+            </div>            
             <div class="code__container">
                 <div class="code__wrapper code--border" style="background-color: #FFC46B;">
                     <div class="mac-buttons"></div>
@@ -103,29 +106,31 @@
                     </code>
                 </div>
                 <div class="code__sections">
-                    <section class="code__sections__info">
+                    <section class="sections__info">
                         <h2>Título do projeto</h2>
                         <p>Essa é a descrição do meu projeto.</p>
                     </section>
-                    <div class="code__sections__social">
-                        <section class="code__sections__social__interactions">
-                            <div class="code__sections__social__interactions__comments">
+                    <div class="sections__social">
+                        <section class="social__interactions">
+                            <div class="social__interactions__comments">
                                 <img src="../../assets/img/icons/comments.svg" alt="comments icon">
                                 <span>9</span>
                             </div>
-                            <div class="code__sections__social__interactions__like">
-                                <img src="../../assets/img/icons/likes.svg" alt="likes icon">
+                            <div class="social__interactions__like">
+                                <img 
+                                    src="../../assets/img/icons/likes.svg"
+                                    alt="likes icon"                                  
+                                >
                                 <span>9</span>
                             </div>
                         </section>
-                        <section class="code__sections__social__profile">
+                        <section class="social__profile">
                             <img src="../../assets/img/profile/Author.png" alt="author image">
                             <span>@Nicolas</span>
                         </section>
                     </div>
                 </div>
-            </div>                
-            
+            </div>            
             <div class="code__container">
                 <div class="code__wrapper code--border" style="background-color: #FF6BCD;">
                     <div class="mac-buttons"></div>
@@ -144,53 +149,80 @@
                     </code>
                 </div>
                 <div class="code__sections">
-                    <section class="code__sections__info">
+                    <section class="sections__info">
                         <h2>Título do projeto</h2>
                         <p>Essa é a descrição do meu projeto.</p>
                     </section>
-                    <div class="code__sections__social">
-                        <section class="code__sections__social__interactions">
-                            <div class="code__sections__social__interactions__comments">
+                    <div class="sections__social">
+                        <section class="social__interactions">
+                            <div class="social__interactions__comments">
                                 <img src="../../assets/img/icons/comments.svg" alt="comments icon">
                                 <span>9</span>
                             </div>
-                            <div class="code__sections__social__interactions__like">
-                                <img src="../../assets/img/icons/likes.svg" alt="likes icon">
+                            <div class="social__interactions__like">
+                                <img 
+                                    src="../../assets/img/icons/likes.svg"
+                                    alt="likes icon"                                  
+                                    >
                                 <span>9</span>
                             </div>
                         </section>
-                        <section class="code__sections__social__profile">
+                        <section class="social__profile">
                             <img src="../../assets/img/profile/Author.png" alt="author image">
                             <span>@Nicolas</span>
                         </section>
                     </div>
                 </div>
-            </div>               
-
+            </div>            
         </main>
     </div>
+    
 </template>
 
 <script>
-    import Menu from '../Menu.vue'
+    import Menu from '../Menu.vue';
     export default {
         components:{
             Menu
+        },
+
+        mounted(){
+            document.querySelector("a[href='/']").closest('.menu__link').classList.add('menu__item--disabled');
+            document.querySelector("a[href='/community']").closest('.menu__link').classList.remove('menu__item--disabled');    
+            
+            this.likeButton()
+        },
+
+        methods:{
+            likeButton(){
+                const like = document.querySelectorAll('.social__interactions__like');
+
+                like.forEach(item=>{
+                    item.addEventListener('click', ()=>{
+                        if(item.querySelector('img').src.indexOf('likes') != -1){
+                            item.querySelector('img').src = require('../../assets/img/icons/like-pressed.svg');
+                            item.querySelector('span').innerText = '10';
+                        }else{
+                            item.querySelector('img').src = require('../../assets/img/icons/likes.svg');
+                            item.querySelector('span').innerText = '9';
+                        }
+                    });
+                });
+            }
         }
     }
 </script>
 
 <style scoped>
+@import url('../../assets/css/screens/mobileCommunity.css');
+@import url('../../assets/css/screens/tabletCommunity.css');
+
 .code{
     width: 78.5%;
     
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-}
-
-.code .code__container{
-    width: 100%;
 }
 
 .code .code__container .code--border{
@@ -201,6 +233,7 @@
     border-radius: var(--border-radius);
     position: relative;
     z-index: 1;
+    padding: 30px;
     margin-bottom: -6px;
 }
 
@@ -214,22 +247,21 @@
     background-color: var(--bg-textarea);
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
-    margin-bottom: -6px;
-    
 }
 
 .code .code__container .code__wrapper code{
     width: 100%;
-    height: 208px;
     display: block;
     border: none;
-    border-radius: var(--border-radius);
     background-color: var(--bg-textarea);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
     padding: 24px 16px;
     color: var(--branco);
     font-size: 14px;
     line-height: 18px;
     font-family: 'Roboto', sans-serif;
+    overflow: auto;
 }
 
 .code .code__container .code__sections{
@@ -242,96 +274,65 @@
     font-family: var(--font-family);
 }
 
-.code .code__container .code__sections .code__sections__info h2{
+.code .code__container .code__sections .sections__info h2{
     font-weight: bold;
     font-size: 21px;
     line-height: 31px;
 }
 
-.code .code__container .code__sections .code__sections__info p{
+.code .code__container .code__sections .sections__info p{
     line-height: 24px;
     margin-top: 8px;
 }
 
-.code .code__container .code__sections .code__sections__social{
+.code .code__container .code__sections .sections__social{
     display: flex;
     justify-content: space-between;
     margin-top: 35.25px;
 }
 
-.code .code__container .code__sections .code__sections__social span{
+.code .code__container .code__sections .sections__social span{
     font-size: 16px;
     line-height: 24px;
 }
 
-.code .code__container .code__sections .code__sections__social__interactions{
+.code .code__container .code__sections .social__interactions{
     display: flex;
     gap: 18px;
 }
 
-.code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__comments,
-.code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__like{
+.code .code__container .code__sections .social__interactions .social__interactions__comments,
+.code .code__container .code__sections .social__interactions .social__interactions__like{
     display: flex;
     align-items: center;
     padding: 10px;
 }
 
-.code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__comments img,
-.code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__like img{
+.code .code__container .code__sections .social__interactions .social__interactions__comments img,
+.code .code__container .code__sections .social__interactions .social__interactions__like img{
     margin-right: 10px;
 }
 
-.code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__comments:hover,
-.code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__like:hover,
-.code .code__container .code__sections .code__sections__social__profile:hover{
+.code .code__container .code__sections .social__interactions .social__interactions__comments:hover,
+.code .code__container .code__sections .social__interactions .social__interactions__like:hover,
+.code .code__container .code__sections .social__profile:hover{
     background: var(--bg-hover-color);
     border-radius: var(--border-radius);
 }
 
-.code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__comments:active,
-.code .code__container .code__sections .code__sections__social__interactions .code__sections__social__interactions__like:active{
+.code .code__container .code__sections .social__interactions .social__interactions__comments:active,
+.code .code__container .code__sections .social__interactions .social__interactions__like:active{
     background: var(--bg-opacity);
 }
 
-.code .code__container .code__sections .code__sections__social__profile{
+.code .code__container .code__sections .social__profile{
     display: flex;
     align-items: center;
     padding: 10px;
 }
 
-.code .code__container .code__sections .code__sections__social__profile img{
+.code .code__container .code__sections .social__profile img{
     margin-right: 8px;
 }
 
-@media screen and (max-width: 800px){
-    .code{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .menu__responsive{
-        z-index: 100;
-    }
-}
-
-@media screen and (max-width: 660px){
-    .code{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .app header .search-box{
-        display: none;
-    }
-
-    .app header .search-icon{
-        width: 5%;
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 36px;   
-    }
-
-}
 </style>
