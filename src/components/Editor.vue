@@ -17,6 +17,7 @@
                         contenteditable="true" 
                         aria-label="editor"
                         
+                        
                     ></code>
                 </div>
             </div>
@@ -105,6 +106,34 @@
         background: var(--bg-textarea);
         border-radius: var(--border-radius);
     }
+
+    .code .code__wrapper .code__highlight .save{
+        width: 100%;
+        display: flex;
+        margin-top: -20px;
+        justify-content: right;
+    }
+
+    .code .code__wrapper .code__highlight .save select,
+    .code .code__wrapper .code__highlight .save button{
+        background: var(--bg-textarea);
+        border-radius: var(--border-radius);
+        padding: 5px;
+        color: var(--branco);
+
+    }
+
+    .code .code__wrapper .code__highlight .save select{
+        margin-right: 5px;
+    }
+
+    .code .code__wrapper .code__highlight .save button{
+        
+        margin-right: 16px;
+        
+        
+    }
+
 
     .code .code__wrapper .code__highlight .mac-buttons{
         width: 100%;
