@@ -19,7 +19,7 @@
     }
 </script>
 
-<style scoped>
+<style>
     .container{
         display: flex;
         justify-content: space-between;

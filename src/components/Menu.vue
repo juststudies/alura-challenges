@@ -80,16 +80,16 @@ nav .menu .menu__item .menu__icon{
 }
 
 nav .menu .menu__item .menu__link{
-    opacity: 16%;
+    opacity: 0.16;
 }
 
 nav .menu .menu__item .menu__link:hover{ 
-    opacity: 64%;
+    opacity: 0.64;
 }
 
 nav .menu .menu__item .menu__link:not(.menu__item--disabled),
 nav .menu .menu__item .menu__link:not(.menu__item--disabled):hover{
-    opacity: 100%;
+    opacity: 1;
 }
 
 
