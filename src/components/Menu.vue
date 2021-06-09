@@ -39,7 +39,7 @@
     }
 </script>
 
-<style scoped>
+<style>
 nav{
     width: 18%;
     color: var(--branco);

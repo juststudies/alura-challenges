@@ -11,7 +11,7 @@
             <div class="customization__options">
                 <select 
                     class="customization__languages" 
-                    @change="changeLanguage()"                    
+                    @change="changeLanguage()"    
                 >
                     <option v-for="option in options" :selected="option == 'javascript'" v-bind:key="option.id">
                         {{option.name}}
@@ -65,7 +65,7 @@
 
             changeLanguage(){
                 const codeEditor = document.querySelector('.code__editor');
-                const selectLanguage = document.querySelector('.customization__languages');
+                const selectLanguage = document.querySelector('.customization__languages')
                 const code = codeEditor.querySelector('code');
                 codeEditor.innerHTML = `<code class="preview hljs ${selectLanguage.value}" contenteditable="true" aria-label="editor"></code>`;
 
