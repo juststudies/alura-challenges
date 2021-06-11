@@ -9,12 +9,13 @@
     import Header from './Header';
     export default {
         name: 'Main',
+        
         components: {
-            Header,
-        }
+            Header
+        },
     }
 </script>
 
-<style scoped>
+<style>
 
 </style>

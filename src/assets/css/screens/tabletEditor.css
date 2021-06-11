@@ -6,7 +6,7 @@
     }
 
     #app header{
-        margin: 32px 32px;
+        margin: 0;
     }
 
     #app header .profile{
@@ -19,7 +19,7 @@
     }
     
     #app header .search-box{
-        width: 62.9%;
+        width: 58.8%;
                 
     }
     
@@ -36,20 +36,29 @@
         background: var(--bg-burger-hover-color);
         border-radius: 16px;
     }
-
+    
     #app header .burger-menu:active{
         background: var(--bg-burger-active-color);
     }
-
+    
     #app header .close{
         background: url('../../img/icons/close.svg');
     }
     
-
+    #app .container{
+        width: 100%;
+        flex-direction: column;
+        margin: 2.5em 0;
+    }
+    
     #app .container nav{
         display: none;
     }
-
+    
+    #app .container .code{
+        width: 100%;
+    }
+    
     #app .container .menu__responsive{
         width: 31%;
         height: 85%;
@@ -97,15 +106,6 @@
         margin-right: 8px;
     }
 
-    #app .container{
-        flex-direction: column;
-        margin: 32px 32px;
-        
-    }
-
-    #app .container .code{
-        width: 100%;
-    }
 
     #app .container form{
         width: 100%;

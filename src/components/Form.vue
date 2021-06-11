@@ -11,7 +11,7 @@
             <div class="customization__options">
                 <select 
                     class="customization__languages" 
-                    @change="changeLanguage()"    
+                    @change="changeLanguage"    
                 >
                     <option v-for="option in options" :selected="option == 'javascript'" v-bind:key="option.id">
                         {{option.name}}
@@ -26,16 +26,16 @@
                 </div>
             </div>
         </div>
-        <button type="submit" @click="handleSubmit()">Salvar projeto</button>
+        <button type="submit" @click="handleSubmit">Salvar projeto</button>
     </form>
 </template>
 
 <script>
+    import giveAnId from './utils/generateID.js';
     export default {
         name: 'Form',
         data(){
             return{
-                
                 options:[
                     {
                         id:0,
@@ -49,9 +49,10 @@
                         id:2,
                         name:'css'
                     }
-                ]
+                ],
             }
         },
+
         methods: {
             changeColor(){
                 const border = document.querySelector('.code--border');
@@ -66,20 +67,49 @@
             changeLanguage(){
                 const codeEditor = document.querySelector('.code__editor');
                 const selectLanguage = document.querySelector('.customization__languages')
-                const code = codeEditor.querySelector('code');
+                const code = {'text':codeEditor.querySelector('code').innerText};
                 codeEditor.innerHTML = `<code class="preview hljs ${selectLanguage.value}" contenteditable="true" aria-label="editor"></code>`;
 
-                codeEditor.firstChild.innerText = code.innerText;  
+                codeEditor.firstChild.innerText = code.text;  
             },
 
             handleSubmit(e){
                 e.preventDefault();
+                const project = this.buildProject();
+                this.saveToLocalStorage(project);
+                alert('Seu código foi criado com sucesso!')
+                this.$router.push('community')
+            },
+
+            buildProject(){
+                const title = document.querySelector('.project__title');
+                const description = document.querySelector('.project__description');
+                const color = document.querySelector('input[type="color"]');
+                const selectLanguage = document.querySelector('.customization__languages');
+                const codeEditor = document.querySelector('.code__editor');
+                
+                let project ={
+                    'id': giveAnId(),
+                    'projectDetails':{
+                        'color': color.value,
+                        'title': title.value,
+                        'description': description.value,
+                        'language': selectLanguage.value,
+                        'code': codeEditor.querySelector('code').innerText,
+                    },
+                }
+
+                return project;
+            },
+
+            saveToLocalStorage(objJson){
+                localStorage.setItem(objJson.id, JSON.stringify(objJson))
             }
         }
     }
 </script>
 
-<style>
+<style scoped>
     form{
         width: 20%;
         height: 100%;

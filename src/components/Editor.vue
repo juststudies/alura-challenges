@@ -2,22 +2,22 @@
     <main class="code">
         <div class="code__wrapper code--border">
             <div class="code__highlight">
-                <div class="mac-buttons"></div>
-                <div class="save">
-                    <select name="extensions" >
-                        <option value="png">PNG</option>
-                        <option value="svg">SVG</option>
-                        <option value="jpg">JPG</option>
-                    </select>
-                    <button @click="save">Salvar</button>
+                <div class="code__header">
+                    <div class="mac-buttons"></div>
+                    <div class="save">
+                        <select name="extensions" >
+                            <option value="png">PNG</option>
+                            <option value="svg">SVG</option>
+                            <option value="jpg">JPG</option>
+                        </select>
+                        <button @click="save">Salvar</button>
+                    </div>
                 </div>
                 <div class="code__editor">
                     <code 
-                        class="preview hljs"
+                        class="preview hljs javascript"
                         contenteditable="true" 
-                        aria-label="editor"
-                        
-                        
+                        aria-label="editor"                        
                     ></code>
                 </div>
             </div>
@@ -82,6 +82,9 @@
 </script>
 
 <style>
+    @import url('../assets/css/screens/tabletEditor.css');
+    @import url('../assets/css/screens/mobileEditor.css');
+    
     .code{
         display: flex;
         flex-direction: column;
@@ -107,11 +110,29 @@
         border-radius: var(--border-radius);
     }
 
-    .code .code__wrapper .code__highlight .save{
+    .code .code__wrapper .code__highlight .code__header{
         width: 100%;
         display: flex;
-        margin-top: -20px;
+        justify-content: space-between;
+        background-color: var(--bg-textarea);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+    }
+
+    .code .code__wrapper .code__highlight .code__header .mac-buttons{
+        width: 50%;
+        height: 34px;
+        display: flex;
+        background-image: url('../assets/img/icons/mac_buttons.svg');
+        background-repeat: no-repeat;
+        background-position: 1em 1em;
+    }
+
+    .code .code__wrapper .code__highlight .code__header .save{
+        width: 50%;
+        display: flex;
         justify-content: right;
+        padding: 1em;
     }
 
     .code .code__wrapper .code__highlight .save select,

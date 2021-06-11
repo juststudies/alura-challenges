@@ -3,7 +3,7 @@
             <div class="logo">
                 <img src="../assets/img/logo/Logo.svg" alt="Logo Alura Dev">
             </div>
-            <div class="search-icon">
+            <div class="search-icon" @click="handleSearchIcon()" @blur="handleRemoveStyles()">
                 <img src="../assets/img/icons/search.svg" alt="search icon">
             </div>
             <input type="text" class="search-box" placeholder="Busque por algo">
@@ -15,14 +15,65 @@
                 </div>
             </div>
             <div class="burger-menu">
-                <img src="../assets/img/icons/burger-icon.svg" alt="burger icon menu">
+                <img src="../assets/img/icons/burger-icon.svg" alt="burger icon menu" @click="handleBurgerMenu()">
             </div>
         </header>
 </template>
 
 <script>
     export default {
-        name: 'Header'
+        name: 'Header',
+        
+        methods:{
+            handleBurgerImage(){
+                const burgerImage = document.querySelector('.burger-menu');
+                
+                if (burgerImage.querySelector('img').src.indexOf('burger-icon')!=-1) {
+                    burgerImage.querySelector('img').src  = require("../assets/img/icons/close.svg");
+                }
+                
+                else {
+                    burgerImage.querySelector('img').src = require("../assets/img/icons/burger-icon.svg");
+                }
+
+            },
+
+            handleBurgerMenu(){
+                this.handleBurgerImage();
+                const nav = document.querySelector('nav');
+                nav.classList.toggle('menu__responsive');
+            },
+
+            handleSearchIcon(){
+                const searchIcon = document.querySelector('.search-icon');
+
+                document.querySelector('.logo').style.display = 'none';
+                searchIcon.querySelector('img').style.display = 'none';
+                document.querySelector('.search-box').style.display = 'block';
+                document.querySelector('.search-box').style.position = 'absolute';
+                document.addEventListener('keyup', (ev)=>{
+                    if(ev.key === "Escape"){
+                        this.handleRemoveStyles();
+                        console.log('disparou!');
+                    }
+                });
+            },
+
+            handleRemoveStyles(){
+                const searchIcon = document.querySelector('.search-icon');
+                document.querySelector('.logo').removeAttribute('style');
+                searchIcon.querySelector('img').removeAttribute('style');
+                document.querySelector('.search-box').removeAttribute('style');
+            }
+        },
+
+        watch:{
+            '$route'(){
+                this.handleRemoveStyles();
+                const burgerImage = document.querySelector('.burger-menu');
+                burgerImage.querySelector('img').src = require('../assets/img/icons/burger-icon.svg');
+            }
+        }
     }
 </script>
 

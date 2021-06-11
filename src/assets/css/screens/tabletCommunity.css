@@ -1,19 +1,16 @@
-@media screen and (max-width: 660px){
-    .code{
+@media screen and (max-width: 800px){
+    
+#app .container #code{
         width: 100%;
         display: flex;
         flex-direction: column;
+        
+        
+        grid-template-columns: 0;
+        gap: 24px;
     }
 
-    .app header .search-box{
-        display: none;
+    .menu__responsive{
+        z-index: 100;
     }
-
-    .app header .search-icon{
-        width: 5%;
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 36px;   
-    }
-
 }

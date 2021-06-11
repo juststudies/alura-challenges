@@ -1,4 +1,4 @@
-@media screen and (max-width: 660px){
+@media screen and (max-width: 600px){
     #app{
         margin: 0;
         padding: 0;
@@ -6,29 +6,30 @@
     }
 
     #app header{
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        margin: 27px 16px;
+        
     }
 
     #app header .logo{
-        width: 100%;
+        width: 50%;
+    }
+
+    #app header .burger-menu{
+        position: absolute;
+        right: 1em;
     }
 
     #app header .search-box{
         display: none;
     }
 
-    #app header .burger-menu{
-        width: 13%;
-        
-    }
-
     #app header .search-icon{
-        width: 5%;
         display: flex;
-        justify-content: flex-end;
+        position: absolute;
         margin-right: 36px;
+        right: 3em;
         
     }
 
@@ -38,8 +39,10 @@
     }
 
     #app .container{
+        width: 100%;
         flex-direction: column;
-        margin: 16px;
+        margin: 58px 0;
+                
     }
 
     #app .container .code{
@@ -58,6 +61,6 @@
     }
 
     #app .container form .customization .customization__options #color input{
-        width: 95%;
+        width: 97%;
     }
 }
