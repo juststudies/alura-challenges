@@ -13,11 +13,9 @@
                 </div>
                 <div class="code__editor">
                     <code 
-                        class="preview hljs"
+                        class="preview hljs javascript"
                         contenteditable="true" 
-                        aria-label="editor"
-                        
-                        
+                        aria-label="editor"                        
                     ></code>
                 </div>
             </div>
@@ -82,6 +80,9 @@
 </script>
 
 <style>
+    @import url('../assets/css/screens/tabletEditor.css');
+    @import url('../assets/css/screens/mobileEditor.css');
+    
     .code{
         display: flex;
         flex-direction: column;
