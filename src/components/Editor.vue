@@ -129,9 +129,9 @@
     }
 
     .code .code__wrapper .code__highlight .code__header .save{
-        width: 50%;
+        
         display: flex;
-        justify-content: right;
+        justify-content: end;
         padding: 1em;
     }
 
