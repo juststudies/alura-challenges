@@ -36,7 +36,7 @@ E rodar no servidor local:
 
 `npm run serve`
 
-Ou utilizar a vercel [online](https://alura-challenges-hrvkxbx4g-juststudies.vercel.app/)
+Ou utilizar a vercel [online](https://alura-challenges.vercel.app/)
 
 ## O que aprendi com esse projeto:
 
